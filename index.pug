@@ -1,0 +1,40 @@
+-var name = "Ibrahim Ali Mohamed";
+-var account = "eng.ibrahimmalii@gmail.com"
+-var shots = 85;
+-var followers = 1000;
+-var projects = 5;
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel='stylesheet' href='style.css')
+        title MyCv 
+    body 
+        section.mainbody 
+            .containerone   
+                .personImg 
+                button.pro Pro 
+                - for (var i = 0 ; i < 3 ; i++)
+                    span.menu 
+            .containertwo 
+            .containerthree
+                h2 #{name}
+                h5 Planet Earth
+                p Full Stack Developer
+                p #{account}
+                p.city Elmahalla Alkubra 
+                i(class='fa fa-facebook fa-lg')
+                i(class='fa fa-twitter fa-lg' href='http://www.facebook.com')
+                i(class='fa fa-whatsapp fa-lg')
+            .containernum 
+                span(class='shots icon') #{shots}
+                span(class='followers icon') #{followers}
+                span(class='projects icon') #{projects}
+                br 
+                each type, index  in ["shots" , "followers" , "projects"]
+                    span.type=type 
+            .footer 
+                button.footer Follow Me Now
